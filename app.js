@@ -14,10 +14,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.all('*', cors);
 app.use('/', indexRouter);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/posts', postsRouter);
 app.use('/users', usersRouter);
 
