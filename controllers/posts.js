@@ -1,7 +1,11 @@
-const { POSTS } = require('../data');
+const { CATEGORIES, POSTS } = require('../data');
 
 async function getAllPosts() {
   return POSTS;
+}
+
+async function getPostCategories() {
+  return Object.values(CATEGORIES);
 }
 
 async function getPostById(postId) {
@@ -10,5 +14,6 @@ async function getPostById(postId) {
 
 module.exports = {
   getAllPosts,
-  getPostById
+  getPostById,
+  getPostCategories
 }

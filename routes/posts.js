@@ -5,6 +5,9 @@ const postsController = require('../controllers/posts');
 /* GET posts listing. */
 router.get('/', getAllPosts);
 
+/* GET post categories. */
+router.get('/categories', getPostCategories);
+
 /* GET a post. */
 router.get('/:postId', getPostById);
 
@@ -45,6 +48,16 @@ async function getPostById(req, res) {
     }
 
     return res.status(200).send(post);
+}
+
+async function getPostCategories(req, res) {
+    const categories = await postsController.getPostCategories();
+
+    if (!categories) {
+        return res.status(404).end();
+    }
+
+    return res.status(200).send(categories);
 }
 
 module.exports = router;
