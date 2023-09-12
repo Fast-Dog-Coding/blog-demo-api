@@ -33,13 +33,13 @@ const POSTS = {
       '        assess the developer\'s capabilities: Are they employing modern techniques? Is the code maintainable?</p>\n' +
       '    <h2>The Challenge I Face</h2>\n' +
       '    <p>One challenge I encounter when fulfilling requests for work samples is that all the work I\'ve done is proprietary\n' +
-      '        and belongs to the clients. I can\'t share code or show applications to third parties.</p>\n' +
-      '    <p>Another challenge is that applications and source code from projects I\'ve worked on are typically team-managed.\n' +
+      '        and belongs to my clients. I can\'t share code or show applications to third parties.</p>\n' +
+      '    <p>Another challenge is that projects I\'ve worked on are typically team-managed.\n' +
       '        This means there\'s little original work I can claim as solely my own, as multiple developers may have made\n' +
-      '        changes since I initially wrote the code. I\'ve also modified code originally written by others.</p>\n' +
+      '        changes since I initially wrote the code. Likewise, I\'ve also modified code originally written by others.</p>\n' +
       '    <p>So, how can I meet potential clients or employers\' needs to validate my skills given these constraints?</p>\n' +
       '    <h2>The Solution: "Blog Demo"</h2>\n' +
-      '    <p>One potential solution is to develop an application that\'s solely mine and has been maintained only by me. I can\n' +
+      '    <p>One solution to this challenge is to develop an application that\'s solely mine and has been maintained only by me. I can\n' +
       '        confidently share such an application with potential clients or employers since I own it, and there are no\n' +
       '        third-party limitations. Furthermore, it serves as an authentic sample of my skills, as I am the sole\n' +
       '        developer.</p>\n' +
