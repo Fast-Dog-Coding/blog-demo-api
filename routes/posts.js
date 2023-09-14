@@ -22,13 +22,14 @@ router.get('/:postId', getPostById);
  * @return {Promise<Object>} - A promise that resolves to the retrieved posts.
  */
 async function getAllPosts(req, res) {
-    const posts = await postsController.getAllPosts();
+    const { query } = req;
+    const posts = await postsController.getAllPosts(query);
 
     if (!posts) {
         return res.status(404).end();
     }
 
-    return res.status(200).send(Object.values(posts));
+    return res.status(200).send(posts);
 }
 
 /**
