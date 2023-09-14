@@ -1,4 +1,4 @@
-const CATEGORIES = {
+const CATEGORIES = Object.freeze({
   NodeJs: 'Node.js',
   Angular: 'Angular',
   JavaScript: 'JavaScript',
@@ -8,14 +8,22 @@ const CATEGORIES = {
   IBM_Domino: 'IBM Domino',
   HTML_CSS: 'HTML/CSS',
   MongoDB: 'MongoDB'
-};
+});
+
+const PROMOTION_LEVELS = Object.freeze({
+  HERO: 'hero',
+  FEATURE: 'feature',
+  MAIN: 'main',
+  SIDE_BAR: 'side bar',
+  NONE: 'none'
+});
 
 const POSTS = {
   1: {
   id: 1,
-    categories: [ ],
-    isFeature: true,
-    title: 'Why Make this Blog Application?',
+    categories: [],
+    promotion: PROMOTION_LEVELS.HERO,
+    title: 'Why Create this Blog Application?',
     lede: 'When evaluating potential candidates for a position, it\'s crucial to assess their skills. However, what if\n' +
       '        the applicant\'s work is mostly proprietary? Ideally, they should be able to provide you with a sample of their work\n' +
       '        that they can share.',
@@ -37,7 +45,7 @@ const POSTS = {
       '    <p>Another challenge is that projects I\'ve worked on are typically team-managed.\n' +
       '        This means there\'s little original work I can claim as solely my own, as multiple developers may have made\n' +
       '        changes since I initially wrote the code. Likewise, I\'ve also modified code originally written by others.</p>\n' +
-      '    <p>So, how can I meet potential clients or employers\' needs to validate my skills given these constraints?</p>\n' +
+      '    <p>So, how can I meet potential clients\' or employers\' needs to validate my skills given these constraints?</p>\n' +
       '    <h2>The Solution: "Blog Demo"</h2>\n' +
       '    <p>One solution to this challenge is to develop an application that\'s solely mine and has been maintained only by me. I can\n' +
       '        confidently share such an application with potential clients or employers since I own it, and there are no\n' +
@@ -45,7 +53,9 @@ const POSTS = {
       '        developer.</p>\n' +
       '    <p>This is how the "Blog Demo" application came to be.</p>\n' +
       '    <p>Another reason for choosing a blog as a demonstration application is that the blog posts themselves offer an\n' +
-      '        avenue to elaborate on my resume [link]. I can discuss my skills, the rationale behind my design choices in the\n' +
+      '        avenue to elaborate on\n' +
+      '        <a href="http://localhost:3200/files/Resume_Grant_Lindsay_Senior_Application_Developer.pdf" title="link to my resume" target="_blank">my resume</a>.\n' +
+      '        I can discuss my skills, the rationale behind my design choices in the\n' +
       '        application, and other insights on technical topics.</p>\n' +
       '    <h2>Conclusion</h2>\n' +
       '    <p>I trust you\'ll find this "Blog Demo" application valuable, regardless of your role. If you\'re a recruiter or\n' +
@@ -54,19 +64,19 @@ const POSTS = {
       '    <p>Please don\'t hesitate to reach out with any comments, questions, or suggestions.</p>\n' +
       '    <p>In the meantime, you might find the following links helpful:</p>\n' +
       '    <ul>\n' +
-      '        <li>LinkedIn Profile</li>\n' +
-      '        <li>Resume</li>\n' +
-      '        <li>GitHub Repository</li>\n' +
+      '        <li><a href="https://www.linkedin.com/in/grant-lindsay-us/" title="link to my LinkedIn profile" target="_blank">LinkedIn Profile</a></li>\n' +
+      '        <li><a href="http://localhost:3200/files/Resume_Grant_Lindsay_Senior_Application_Developer.pdf" title="link to my resume" target="_blank">Resume</a></li>\n' +
+      '        <li><a href="https://github.com/orgs/Fast-Dog-Coding/repositories" title="link to my github repositoriies" target="_blank">GitHub Repositories</a></li>\n' +
       '    </ul>',
     authorId: 1,
     publishedDate: '2023-09-01T13:00:00Z'
 },
   2: {
     id: 2,
-    categories: [ 'Node.js' ],
-    isFeature: true,
+    categories: [ CATEGORIES.NodeJs ],
+    promotion: PROMOTION_LEVELS.FEATURE,
     title: 'Node.js: A Powerful Choice for Building APIs',
-    lede: 'In today\'s fast-paced IT world, Node.js has become a powerful choice for building APIs, offering speed, efficiency, a unified language stack, and a rich ecosystem. This blog post explores why Node.js shines in API development and compares it to alternative technologies, helping both technicians and managers make informed decisions for their projects.',
+    lede: 'In today\'s fast-paced IT world, Node.js has become a powerful choice for building APIs, offering speed, efficiency, a unified language stack, and a rich ecosystem. Let\'s explore why Node.js shines in API development and compare it to alternative technologies.',
     imageUrl: '/images/rustic_kitchen.jpg',
     imageUrlCredit: '<a href="https://www.flickr.com/photos/guldem/">Güldem Üstün</a>',
     bodyHtml: '<p>In today\'s fast-paced IT landscape, the need for efficient and scalable API development is more critical than\n' +
@@ -126,8 +136,8 @@ const POSTS = {
   },
   3: {
     id: 3,
-    categories: [ 'MongoDB', 'IBM Cloudant' ],
-    isFeature: true,
+    categories: [ CATEGORIES.MongoDB, CATEGORIES.IBM_Cloudant ],
+    promotion: PROMOTION_LEVELS.FEATURE,
     title: 'MongoDB: Unleashing the Power of NoSQL Databases',
     lede: 'Hey there! Today, we\'re diving into the world of databases and exploring MongoDB, a popular NoSQL database system. We\'ll also take a look at how it compares to traditional relational databases and other NoSQL options. So, grab your virtual passport, because we\'re about to embark on a data-driven journey!',
     imageUrl: '/images/rustic_porch.jpg',
@@ -207,27 +217,91 @@ const POSTS = {
   },
   4: {
     id: 4,
-    categories: [ 'HTML/CSS', 'MongoDB' ],
-    isFeature: false,
-    title: 'New feature',
-    lede: 'This blog post is a placeholder to provide something to fill out the views during development.',
-    imageUrl: '/images/rustic_alley.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/miguelvirkkunen/">Miguel Virkkunen Carvalho</a>',
-    bodyHtml: '\n' +
-      '    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We\'ll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>\n' +
-      '    <ul>\n' +
-      '      <li>First list item</li>\n' +
-      '      <li>Second list item with a longer description</li>\n' +
-      '      <li>Third list item to close it out</li>\n' +
-      '    </ul>\n' +
-      '    <p>This is some additional paragraph placeholder content. It\'s a slightly shorter version of the other highly repetitive body text used throughout.</p>\n',
+    categories: [ CATEGORIES.HTML_CSS, CATEGORIES.IBM_Cloud ],
+    promotion: PROMOTION_LEVELS.MAIN,
+    title: 'Offline this Pushback Discussion',
+    lede: 'Feed the algorithm regroup, but circle back lean into that problem. Price point we need more paper, yet customer centric. Digital literacy put your feelers out.',
+    imageUrl: '/images/rustic_beauty.jpg',
+    imageUrlCredit: '<a href="https://www.flickr.com/photos/levettday/">Alison Day</a>',
+    bodyHtml: '<h2>We Want to Empower the Team</h2>\n' +
+      '<p>Win-win we want to empower the team with the right tools and guidance to uplevel our craft and build better, or can\n' +
+      '    you send me an invite? Form without content style without meaning c-suite, nor root-and-branch review. Deliverables\n' +
+      '    ramp up circle back no scraps hit the floor synergistic actionables, or cross pollination across our domains, nor\n' +
+      '    pixel pushing.</p>\n' +
+      '<h2>Can You Slack It to Me?</h2>\n' +
+      '<p> Golden goose, can we align on lunch orders groom the backlog, nor mumbo jumbo, blue sky. Old boys club. Punter loop\n' +
+      '    back, or are there any leftovers in the kitchen?. Currying favour on-brand but completely fresh, nor we\'re ahead of\n' +
+      '    the curve on that one, so win-win-win draft policy ppml proposal hit the ground running, so dog and pony show.</p>\n' +
+      '<h2>Prioritize these Line Items</h2>\n' +
+      '<p> Feature creep let\'s put a pin in that we\n' +
+      '    should leverage existing asserts that ladder up to the message no need to talk to users, just base it on the space\n' +
+      '    calculator, yet this is meaningless we\'ve got to manage that low hanging fruit.</p>\n' +
+      '<ul>\n' +
+      '    <li>Drink from the firehose</li>\n' +
+      '    <li>What\'s our go to market strategy?</li>\n' +
+      '    <li>Yet in this space, nor flesh that out</li>\n' +
+      '</ul>\n' +
+      '<h2>What Do You Feel You Would Bring to the Table?</h2>\n' +
+      '<p>But, draft policy ppml proposal. Enough to wash your face canatics exploratory investigation data masking, for\n' +
+      '    throughput. Accountable talk you must be muted. Translating our vision of having a market leading platform in this\n' +
+      '    space. Ultimate measure of success. Anti-pattern flesh that out, please advise soonest, and tread it daily. Deploy\n' +
+      '    no need to talk to users, just base it on the space calculator. Digital literacy cloud strategy, yet hammer out.\n' +
+      '</p>',
+    authorId: 3,
+    publishedDate: '2023-09-13T16:30:00Z'
+  },
+  5: {
+    id: 5,
+    categories: [ '' ],
+    promotion: PROMOTION_LEVELS.MAIN,
+    title: '',
+    lede: '',
+    imageUrl: '',
+    imageUrlCredit: '',
+    bodyHtml: '',
     authorId: 1,
-    publishedDate: '2023-01-05T09:00:00Z'
+    publishedDate: ''
+  },
+  6: {
+    id: 6,
+    categories: [ '' ],
+    promotion: PROMOTION_LEVELS.SIDE_BAR,
+    title: '',
+    lede: '',
+    imageUrl: '',
+    imageUrlCredit: '',
+    bodyHtml: '',
+    authorId: 1,
+    publishedDate: ''
+  },
+  7: {
+    id: 7,
+    categories: [ '' ],
+    promotion: PROMOTION_LEVELS.SIDE_BAR,
+    title: '',
+    lede: '',
+    imageUrl: '',
+    imageUrlCredit: '',
+    bodyHtml: '',
+    authorId: 1,
+    publishedDate: ''
+  },
+  8: {
+    id: 8,
+    categories: [ '' ],
+    promotion: PROMOTION_LEVELS.SIDE_BAR,
+    title: '',
+    lede: '',
+    imageUrl: '',
+    imageUrlCredit: '',
+    bodyHtml: '',
+    authorId: 1,
+    publishedDate: ''
   },
   99: {
     id: 99,
     categories: [ '' ],
-    isFeature: false,
+    promotion: PROMOTION_LEVELS.NONE,
     title: '',
     lede: '',
     imageUrl: '',
@@ -245,7 +319,7 @@ const USERS = {
     lastName: 'Lindsay',
     profileUrl: 'https://www.linkedin.com/in/grant-lindsay-us/',
     profileImageUrl: 'http://via.placeholder.com/50x50',
-    profileImageCredit: ''
+    profileImageCredit: '<a href="https://www.freepik.com/free-vector/group-young-people-characters_5825585.htm#query=people%20avatar&position=24&from_view=search&track=ais">Image by studiogstock</a> on Freepik'
   },
   2: {
     id: 2,
@@ -253,12 +327,20 @@ const USERS = {
     lastName: 'v3.5',
     profileUrl: 'https://chat.openai.com/',
     profileImageUrl: 'http://via.placeholder.com/50x50',
-    profileImageCredit: ''
+    profileImageCredit: '<a href="https://www.freepik.com/free-vector/group-young-people-characters_5825585.htm#query=people%20avatar&position=24&from_view=search&track=ais">Image by studiogstock</a> on Freepik'
+  },
+  3: {
+    id: 3,
+    firstName: 'Office',
+    lastName: 'Ipsum',
+    profileUrl: 'http://officeipsum.com/index.php',
+    profileImageUrl: '',
+    profileImageCredit: '<a href="https://www.freepik.com/free-vector/group-young-people-characters_5825585.htm#query=people%20avatar&position=24&from_view=search&track=ais">Image by studiogstock</a> on Freepik'
   },
   99: {
     id: 99,
-    firstName: '',
-    lastName: '',
+    firstName: 'Anonymous',
+    lastName: 'Contributor',
     profileUrl: '',
     profileImageUrl: '',
     profileImageCredit: '<a href="https://www.freepik.com/free-vector/group-young-people-characters_5825585.htm#query=people%20avatar&position=24&from_view=search&track=ais">Image by studiogstock</a> on Freepik'
@@ -270,6 +352,7 @@ const USERS = {
 
 module.exports = {
   CATEGORIES,
+  PROMOTION_LEVELS,
   POSTS,
   USERS
 };
