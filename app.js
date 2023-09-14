@@ -17,6 +17,7 @@ app.use(cookieParser());
 
 app.all('*', cors);
 app.use('/', indexRouter);
+app.use('/files', express.static(path.join(__dirname, 'files')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/posts', postsRouter);
 app.use('/users', usersRouter);
