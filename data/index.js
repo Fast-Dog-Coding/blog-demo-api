@@ -86,15 +86,15 @@ const POSTS = {
       '\n' +
       '    <h2>Why Node.js for APIs?</h2>\n' +
       '\n' +
-      '    <p><strong>Speed and Efficiency</strong></p>\n' +
+      '    <h3>Speed and Efficiency</h3>\n' +
       '    <p>Node.js is known for its non-blocking, event-driven architecture. This makes it exceptionally fast and efficient,\n' +
       '        making it an excellent choice for real-time applications and APIs. Whether you\'re building a RESTful API or a\n' +
       '        WebSocket-based service, Node.js can handle it with ease.</p>\n' +
-      '    <p><strong>Single Language Stack</strong></p>\n' +
+      '    <h3>Single Language Stack</h3>\n' +
       '    <p>For developers, one significant advantage of Node.js is the ability to use JavaScript both on the client and\n' +
       '        server-side. This single-language stack simplifies development and reduces the learning curve. This can be\n' +
       '        particularly beneficial for teams with a diverse skill set.</p>\n' +
-      '    <p><strong>Vibrant Ecosystem</strong></p>\n' +
+      '    <h3>Vibrant Ecosystem</h3>\n' +
       '    <p>Node.js boasts a vast ecosystem of open-source packages available through npm (Node Package Manager). This\n' +
       '        extensive library of modules accelerates development, allowing you to build APIs rapidly without reinventing the\n' +
       '        wheel.</p>\n' +
@@ -103,19 +103,19 @@ const POSTS = {
       '\n' +
       '    <p>Now, let\'s compare Node.js to some alternative technologies commonly used for API development:</p>\n' +
       '\n' +
-      '    <p><strong>1. Ruby on Rails</strong></p>\n' +
+      '    <h3>1. Ruby on Rails</h3>\n' +
       '    <p>Ruby on Rails is renowned for its simplicity and convention over configuration (CoC) philosophy. However, it\n' +
       '        might not be as performant as Node.js, especially for handling a large number of concurrent requests. Node.js\'s\n' +
       '        event-driven model gives it an edge in this aspect.</p>\n' +
-      '    <p><strong>2. Python with Django or Flask</strong></p>\n' +
+      '    <h3>2. Python with Django or Flask</h3>\n' +
       '    <p>Python is another popular choice for web development. Django and Flask are powerful frameworks for building APIs\n' +
       '        in Python. While Python is known for its readability and ease of use, Node.js still excels in terms of speed\n' +
       '        and handling I/O-intensive tasks.</p>\n' +
-      '    <p><strong>3. Java with Spring Boot</strong></p>\n' +
+      '    <h3>3. Java with Spring Boot</h3>\n' +
       '    <p>Java and Spring Boot provide robust solutions for building APIs, especially in large enterprises. They offer\n' +
       '        strong typing and a mature ecosystem. However, Node.js\'s lightweight nature and quick setup can be advantageous\n' +
       '        for smaller projects or startups aiming for rapid development.</p>\n' +
-      '    <p><strong>4. .NET Core</strong></p>\n' +
+      '    <h3>4. .NET Core</h3>\n' +
       '    <p>For Microsoft-centric environments, .NET Core is a strong contender. It\'s known for its performance and support\n' +
       '        for multiple languages. However, it may not be as cross-platform friendly as Node.js, which can run on various\n' +
       '        operating systems.</p>\n' +
@@ -252,27 +252,94 @@ const POSTS = {
   },
   5: {
     id: 5,
-    categories: [ '' ],
+    categories: [ 'Angular', 'JavaScript', 'TypeScript' ],
     promotion: PROMOTION_LEVELS.MAIN,
-    title: '',
-    lede: '',
-    imageUrl: '',
-    imageUrlCredit: '',
-    bodyHtml: '',
-    authorId: 1,
-    publishedDate: ''
+    title: 'Upstream Selling Quantity, and Back to the Drawing-Board',
+    lede: 'We need to button up our approach those options are already baked in with this model, so currying favour, and let\'s circle back to that. High turnaround rate on your plate looks great, can we try it a different way.',
+    imageUrl: '/images/rustic_fence.jpg',
+    imageUrlCredit: '<a href="https://www.flickr.com/photos/iulian-d/">Iulian Dumitru</a>',
+    bodyHtml: '<h2>Best Practices Pivot Design Thinking</h2>\n' +
+      '    <p>Identify pain points weaponize the data blue sky. Offline this discussion this is our north star design, for we\n' +
+      '        need to future-proof this.</p>\n' +
+      '    <p>Pivot win-win-win we\'re starting to formalize flexible opinions around our foundations. My capacity is full, yet\n' +
+      '        gain traction. We need to get the vernacular right we need this overall to be busier and more active.</p>\n' +
+      '    <h2>We Need to Button up Our Approach</h2>\n' +
+      '    <p>At the end of the day cloud native container based, for cloud strategy, if you want to motivate these clowns, try\n' +
+      '        less carrot and more stick. We need to button up our approach those options are already baked in with this\n' +
+      '        model, so currying favour, and let\'s circle back to that.</p>\n' +
+      '    <p>High turnaround rate on your plate looks great, can we try it a different way. Forcing function golden goose, and\n' +
+      '        we\'ve got kpis for that, for drink from the firehose. Social currency we can\'t hear you it\'s a simple lift and\n' +
+      '        shift job, so prairie dogging.</p>\n' +
+      '    <h2>Best Practices High Performance Keywords.</h2>\n' +
+      '    <p>Create spaces to explore what\'s next low-hanging fruit, and game plan. Let\'s circle back tomorrow weaponize the\n' +
+      '        data we need to button up our approach, so get buy-in, for regroup. Slow-walk our commitment define the\n' +
+      '        underlying principles that drive decisions and strategy for your design language, and blue sky thinking my\n' +
+      '        supervisor didn\'t like the latest revision you gave me can you switch back to the first revision?</p>\n' +
+      '    <p>Who\'s the goto on this job with the way forward lift and shift. Quantity work flows pixel pushing, but optics we\n' +
+      '        need to harvest synergy effects, but race without a finish line. It just needs more cowbell that ipo will be a\n' +
+      '        game-changer.</p>\n' +
+      '    <h2>Wrapping Up</h2>\n' +
+      '    <p>Cannibalize strategic high-level 30,000 ft view, yet we need to get all stakeholders up to speed and in the right\n' +
+      '        place. I have zero cycles for this.</p>',
+    authorId: 3,
+    publishedDate: '2023-09-15T16:30:00Z'
   },
   6: {
     id: 6,
-    categories: [ '' ],
+    categories: [ 'IBM Domino', 'MongoDB' ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
-    title: '',
-    lede: '',
-    imageUrl: '',
-    imageUrlCredit: '',
-    bodyHtml: '',
-    authorId: 1,
-    publishedDate: ''
+    title: 'That\'s Not on the Roadmap Workflow Ecosystem',
+    lede: 'Pass the mayo, appeal to the client, sue the vice president encourage & support business growth, yet I have a hard stop in an hour and half. In this space, can you put it on my calendar?',
+    imageUrl: 'images/rustic_goat.jpg',
+    imageUrlCredit: '<a href="https://www.flickr.com/photos/freestocks/">freestocks.org</a>',
+    bodyHtml: '<h2>Overcome Key Issues to Meet Key Milestones</h2>\n' +
+      '    <p>I am dead inside. Can you put it on my calendar? Wheelhouse peel the onion, nor finance, let\'s circle back to\n' +
+      '        that. That\'s not on the roadmap workflow ecosystem powerpoint Bunny, nor cross sabers. Minimize backwards\n' +
+      '        overflow get buy-in player-coach, or fire up your browser. Who\'s the goto\n' +
+      '        on this job with the way forward productize work.\n' +
+      '    </p>\n' +
+      '    <p>I know you\'re busy translating our vision of having a market leading platform drop-dead date, nor collaboration\n' +
+      '        through advanced technology. Drill down. Both the angel on my left shoulder and the devil on my right are eager\n' +
+      '        to go to the next board meeting and say we\'re ditching the business model.\n' +
+      '    </p>\n' +
+      '    <h2>Ditching the Business Model</h2>\n' +
+      '    <p>Timeframe old boys club, nor level the playing field regroup. We need to get the vernacular right technologically\n' +
+      '        savvy I\'ll book a meeting so we can solution this before the sprint is over quick-win, so goalposts. Timeframe\n' +
+      '        we have to leverage up the messaging, or introduction, for peel the onion, for zeitgeist, so product market fit.\n' +
+      '    </p>\n' +
+      '    <p>Optics digital literacy. Great plan! let me diarize this, and we can synchronise\n' +
+      '        ourselves at a later time, point imagineer. Get all your ducks in a row three-martini lunch, but what\'s the\n' +
+      '        status on the deliverables for eow? we\'ve got to manage that low hanging fruit optimize the fireball. Obviously\n' +
+      '        quick sync, out of the loop, or cc me on that mobile friendly exposing new ways to evolve our design language.\n' +
+      '    </p>\n' +
+      '    <h2>Open Door Policy Cloud Strategy</h2>\n' +
+      '    <p>High touch client we need to follow protocol bench mark, so i need to pee and\n' +
+      '        then go to another meeting, or brand terrorists, and run it up the flagpole, ping the boss and circle back.\n' +
+      '        Bottleneck mice lose client to 10:00 meeting let\'s pressure test this wiggle room, or translating our vision of\n' +
+      '        having a market leading platform, nor we need to aspirationalize our offerings.\n' +
+      '    </p>\n' +
+      '    <p>Slow-walk our commitment peel the onion. Turn the ship, anti-pattern, and granularity. Digital literacy no scraps\n' +
+      '        hit the floor, for can we align on lunch orders, yet product market fit, so scope creep. Bells and whistles\n' +
+      '        offline this discussion, but we\'ve got kpis for that, and 4-blocker you must be muted where do we stand on the\n' +
+      '        latest client ask.\n' +
+      '    </p>\n' +
+      '    <h2>Encourage & Support Business Growth</h2>\n' +
+      '    <p>Turn the crank market-facing I need to go to another meeting. Make it more corporate please\n' +
+      '        all hands on deck optimize the fireball, so powerPointless marginalised key performance indicators. Accountable\n' +
+      '        talk timeframe, but we\'ve got kpis for that gain alignment deploy. Organic growth encourage & support business\n' +
+      '        growth, so circle back, so reinvent the wheel, or knowledge is power prioritize these line items, or high touch\n' +
+      '        client.\n' +
+      '    </p>\n' +
+      '    <p>Open door policy that\'s not on the roadmap. We need to start advertising on social media that\'s not on\n' +
+      '        the roadmap cross functional teams enable out of the box brainstorming, for pushback. Mumbo jumbo closer to the\n' +
+      '        metal, the last person we talked to said this would be ready, and peel the onion can you put it into a banner\n' +
+      '        that is not alarming, but eye catching and not too giant cta root-and-branch review.\n' +
+      '    </p>\n' +
+      '    <h2>In Conclusion</h2>\n' +
+      '    <p>Marketing computer development html ROI feedback team website dog and pony show, yet feed the algorithm don\'t\n' +
+      '        over think it, ramp up, but idea shower.</p>',
+    authorId: 3,
+    publishedDate: '2023-09-05T16:30:00Z'
   },
   7: {
     id: 7,
