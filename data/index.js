@@ -149,12 +149,14 @@ const POSTS = {
       '        understand what sets MongoDB apart from the more traditional relational databases.</p>\n' +
       '\n' +
       '    <h2>Relational vs. NoSQL: The Showdown</h2>\n' +
+      '    <p>In the red corner, we have the heavyweight champion, Relational Databases! On the other side,\n' +
+      '        we\'ve got MongoDB, the agile contender.</p>\n' +
       '\n' +
       '    <h3>Data Structure</h3>\n' +
-      '    <p>In the red corner, we have the heavyweight champion, Relational Databases! These databases, like MySQL and\n' +
-      '        PostgreSQL, store data in tables with rows and columns, which is perfect for structured data. On the other side,\n' +
-      '        we\'ve got MongoDB, the agile contender. It uses a document-based model, which means data is stored in JSON-like\n' +
-      '        documents. This flexibility allows you to store semi-structured or unstructured data effortlessly.</p>\n' +
+      '    <p>Relational databases, like MySQL and PostgreSQL, store data in tables with rows and columns, which\n' +
+      '        is perfect for structured data. Whereas, NoSQL databases, like MongoDB use a document-based model,\n' +
+      '        which means data is stored in JSON-like documents. This flexibility allows you to store\n' +
+      '        semi-structured or unstructured data effortlessly.</p>\n' +
       '\n' +
       '    <h3>Scalability</h3>\n' +
       '    <p>When it comes to handling large datasets and high traffic, MongoDB flexes its muscles. It\'s designed for\n' +
@@ -217,42 +219,92 @@ const POSTS = {
   },
   4: {
     id: 4,
-    categories: [ CATEGORIES.HTML_CSS, CATEGORIES.IBM_Cloud ],
+    categories: [ CATEGORIES.IBM_Domino ],
     promotion: PROMOTION_LEVELS.MAIN,
-    title: 'Offline this Pushback Discussion',
-    lede: 'Feed the algorithm regroup, but circle back lean into that problem. Price point we need more paper, yet customer centric. Digital literacy put your feelers out.',
-    imageUrl: '/images/rustic_beauty.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/levettday/">Alison Day</a>',
-    bodyHtml: '<h2>We Want to Empower the Team</h2>\n' +
-      '<p>Win-win we want to empower the team with the right tools and guidance to uplevel our craft and build better, or can\n' +
-      '    you send me an invite? Form without content style without meaning c-suite, nor root-and-branch review. Deliverables\n' +
-      '    ramp up circle back no scraps hit the floor synergistic actionables, or cross pollination across our domains, nor\n' +
-      '    pixel pushing.</p>\n' +
-      '<h2>Can You Slack It to Me?</h2>\n' +
-      '<p> Golden goose, can we align on lunch orders groom the backlog, nor mumbo jumbo, blue sky. Old boys club. Punter loop\n' +
-      '    back, or are there any leftovers in the kitchen?. Currying favour on-brand but completely fresh, nor we\'re ahead of\n' +
-      '    the curve on that one, so win-win-win draft policy ppml proposal hit the ground running, so dog and pony show.</p>\n' +
-      '<h2>Prioritize these Line Items</h2>\n' +
-      '<p> Feature creep let\'s put a pin in that we\n' +
-      '    should leverage existing asserts that ladder up to the message no need to talk to users, just base it on the space\n' +
-      '    calculator, yet this is meaningless we\'ve got to manage that low hanging fruit.</p>\n' +
+    title: 'The Rise and Decline of Notes and Domino: A Brief History and Analysis',
+    lede: 'HCL Notes and Domino, previously known as IBM Notes and IBM Domino, were once powerful players in collaborative software. This blog post explores their history, highlights their strengths, including security and programmability, and offers insights into why their popularity eventually waned.',
+    imageUrl: '/images/rustic_window.jpg',
+    imageUrlCredit: '<a href="https://www.flickr.com/photos/dejankrsmanovic/">Dejan Krsmanovic</a>',
+    bodyHtml: '<p><strong>Introduction:</strong> Notes and Domino (once Lotus, then IBM, and now\n' +
+      '    <a href="https://www.hcl-software.com/domino">HCL</a>,) while still being used globally, once stood as titans in\n' +
+      '    the world of collaborative software solutions. They boasted an impressive array of features, from robust security to\n' +
+      '    advanced replication capabilities and programmability. However, despite their strengths, these once-popular products\n' +
+      '    saw a decline in popularity over time.</p>\n' +
+      '\n' +
+      '<h2>A Short History:</h2>\n' +
+      '<p>Notes and Domino were initially developed by Lotus Development Corporation in 1989. They\n' +
+      '    revolutionized the way businesses handled communication and collaboration. The key innovation was their combination\n' +
+      '    of email, calendar, and database capabilities in a single platform. In 1995, IBM acquired Lotus, leading to the\n' +
+      '    rebranding of these products as IBM Notes and Domino. </p>\n' +
+      '<p>In 2019, IBM sold these (and other) products to <a href="https://www.hcl-software.com/" target="_blank">HCL\n' +
+      '    Technologies</a>, which continues to actively sell and support them. More on the history and current state of Notes\n' +
+      '    and Domino\n' +
+      '    <a href="https://en.wikipedia.org/wiki/HCL_Domino" target="_blank">can be found here</a>.</p>\n' +
+      '\n' +
+      '<h2>Strengths of Notes/Domino:</h2>\n' +
+      '<ol>\n' +
+      '    <li><strong>Security:</strong> Notes/Domino are known for their robust security features, implemented well ahead of\n' +
+      '        their time. They offer encryption, two-factor user authentication, and sophisticated access control, making them\n' +
+      '        a trusted choice for organizations dealing with sensitive data.\n' +
+      '    </li>\n' +
+      '\n' +
+      '    <li><strong>Replication:</strong> Replication is a standout feature, allowing data synchronization across\n' +
+      '        distributed servers. This makes them ideal for organizations with a global footprint, ensuring data consistency\n' +
+      '        and availability.\n' +
+      '    </li>\n' +
+      '\n' +
+      '    <li><strong>NoSQL Database Store:</strong> Lotus Domino uses a document-based NoSQL database, which was ahead of its\n' +
+      '        time. It\n' +
+      '        allows for flexible data modeling, making it suitable for a wide range of applications beyond traditional\n' +
+      '        email.\n' +
+      '    </li>\n' +
+      '\n' +
+      '    <li><strong>Programmability:</strong> LotusScript, a scripting language, enable extensive customization and\n' +
+      '        automation. Developers can create custom applications within the platform, adding to its versatility. Java was\n' +
+      '        integrated into IBM Notes beginning with Release 4.5. With Release 5, Java support was greatly enhanced and\n' +
+      '        expanded, and JavaScript was added.\n' +
+      '    </li>\n' +
+      '</ol>\n' +
+      '\n' +
+      '<h2>The Decline in Popularity:</h2>\n' +
+      '<p>Several factors contributed to the decline of Notes and Domino\'s popularity:</p>\n' +
       '<ul>\n' +
-      '    <li>Drink from the firehose</li>\n' +
-      '    <li>What\'s our go to market strategy?</li>\n' +
-      '    <li>Yet in this space, nor flesh that out</li>\n' +
+      '    <li><strong>Complexity:</strong> The all-in-one approach, while powerful, also made the software complex and\n' +
+      '        challenging to manage. This complexity often led to higher IT costs.\n' +
+      '    </li>\n' +
+      '\n' +
+      '    <li><strong>Evolution of Competing Platforms:</strong> Newer collaboration and email platforms entered the market,\n' +
+      '        offering more streamlined and user-friendly experiences. Users began to migrate to these alternatives.\n' +
+      '    </li>\n' +
+      '\n' +
+      '    <li><strong>Changing Business Needs:</strong> As businesses evolved, so did their collaboration requirements. Lotus\n' +
+      '        Notes/Domino struggled to keep up with the demand for more agile and cloud-based solutions.\n' +
+      '    </li>\n' +
+      '\n' +
+      '    <li><strong>Mobile Revolution:</strong> The rise of mobile devices shifted user expectations. Notes/Domino\'s\n' +
+      '        mobile support lagged behind, causing frustration among users.\n' +
+      '    </li>\n' +
       '</ul>\n' +
-      '<h2>What Do You Feel You Would Bring to the Table?</h2>\n' +
-      '<p>But, draft policy ppml proposal. Enough to wash your face canatics exploratory investigation data masking, for\n' +
-      '    throughput. Accountable talk you must be muted. Translating our vision of having a market leading platform in this\n' +
-      '    space. Ultimate measure of success. Anti-pattern flesh that out, please advise soonest, and tread it daily. Deploy\n' +
-      '    no need to talk to users, just base it on the space calculator. Digital literacy cloud strategy, yet hammer out.\n' +
+      '\n' +
+      '<h2>Opinion:</h2>\n' +
+      '<p>While Notes and Domino are undeniably powerful tools, their decline from their heyday can be attributed to a\n' +
+      '    combination of factors. The complexity of the platform, changing business landscapes, and the emergence of more\n' +
+      '    user-friendly alternatives played a significant role. However, it\'s worth noting that there are still passionate\n' +
+      '    advocates of these products who appreciate their unique strengths.</p>\n' +
+      '\n' +
+      '<p>In conclusion, the story of Notes and Domino is a reminder that even groundbreaking software can face challenges in a\n' +
+      '    rapidly evolving tech world. Their utility lives on in the memories of those who relied, and still rely, on them for\n' +
+      '    their collaborative needs.\n' +
+      '</p>\n' +
+      '<p>\n' +
+      '    <small class="text-secondary">&mdash;with contributions from <a href="https://openai.com/chatgpt" target="_blank">ChatGTP</a></small>\n' +
       '</p>',
-    authorId: 3,
-    publishedDate: '2023-09-13T16:30:00Z'
+    authorId: 1,
+    publishedDate: '2023-09-15T16:30:00Z'
   },
   5: {
     id: 5,
-    categories: [ 'Angular', 'JavaScript', 'TypeScript' ],
+    categories: [ CATEGORIES.Angular, CATEGORIES.JavaScript, CATEGORIES.TypeScript ],
     promotion: PROMOTION_LEVELS.MAIN,
     title: 'Upstream Selling Quantity, and Back to the Drawing-Board',
     lede: 'We need to button up our approach those options are already baked in with this model, so currying favour, and let\'s circle back to that. High turnaround rate on your plate looks great, can we try it a different way.',
@@ -286,11 +338,11 @@ const POSTS = {
   },
   6: {
     id: 6,
-    categories: [ 'IBM Domino', 'MongoDB' ],
+    categories: [ CATEGORIES.IBM_Domino, CATEGORIES.MongoDB ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'That\'s Not on the Roadmap Workflow Ecosystem',
     lede: 'Pass the mayo, appeal to the client, sue the vice president encourage & support business growth, yet I have a hard stop in an hour and half. In this space, can you put it on my calendar?',
-    imageUrl: 'images/rustic_goat.jpg',
+    imageUrl: '/images/rustic_goat.jpg',
     imageUrlCredit: '<a href="https://www.flickr.com/photos/freestocks/">freestocks.org</a>',
     bodyHtml: '<h2>Overcome Key Issues to Meet Key Milestones</h2>\n' +
       '    <p>I am dead inside. Can you put it on my calendar? Wheelhouse peel the onion, nor finance, let\'s circle back to\n' +
@@ -343,8 +395,38 @@ const POSTS = {
   },
   7: {
     id: 7,
-    categories: [ '' ],
+    categories: [ CATEGORIES.JavaScript, CATEGORIES.TypeScript, CATEGORIES.IBM_Cloud ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
+    title: 'Collaboration Through Advanced Technology - Great Plan!',
+    lede: 'Let me diarize this, and we can synchronise ourselves at a later time point land the plane we need to think big start small and scale fast to energize our clients.',
+    imageUrl: '/images/rustic_relic.jpg',
+    imageUrlCredit: '<a href="https://www.flickr.com/photos/119886413@N05/">Michel Curi</a>',
+    bodyHtml: '<h2>Minimize Backwards Overflow, in this Space</h2>\n' +
+      '<p>It\'s not hard guys my grasp on reality right now is tenuous, so who\'s the goto on this job with the way forward\n' +
+      '    bleeding edge. Closer to the metal nail it down, or granularity, so collaboration through advanced technology. We\n' +
+      '    need this overall to be busier and more active put your feelers out, nor get six alpha pups in here for a focus\n' +
+      '    group roll back strategy, nor what are the expectations, but helicopter view, nor product market fit.</p>\n' +
+      '<p>Put it on the parking lot gage [sic] where the industry is heading and give back to the community what we\'ve\n' +
+      '    learned move the needle this is a no-brainer paddle on both sides reinvent the wheel. Nail it down sorry I didn\'t\n' +
+      '    get your email root-and-branch review.</p>\n' +
+      '<h2>Not Enough Bandwidth, Optimize the Fireball</h2>\n' +
+      '<p>We can\'t hear you, nor manage expectations deploy to production workflow ecosystem, or start procrastinating 2 hours\n' +
+      '    get to do work while procrastinating open book pretend to read while manager stands and watches silently nobody is\n' +
+      '    looking quick do your web search manager caught you and you are fured. </p>\n' +
+      '<p>Minimize backwards overflow conversational content let\'s take this conversation offline, for value prop, and deploy\n' +
+      '    to production circle back. Increase the pipelines not a hill to die on spinning our wheels. Golden goose.\n' +
+      '    Accountable talk. Have bandwidth draw a line in the sand what do you feel you would bring to the table if you were\n' +
+      '    hired for this position, nor a set of certitudes based on deductions founded on false premise.</p>\n' +
+      '<h2>We Need to Crystallize a Plan</h2>\n' +
+      '<p>Thought shower zeitgeist. Win-win feed the algorithm. What\'s the status on the deliverables for EOW? ladder up / ladder back to the strategy, for green technology and climate change re-inventing the wheel drill down. After I ran into Helen at a restaurant, I realized she was just office pretty cta thinking outside the box, we need to harvest synergy effects I called the it department about that ransomware because of the old antivirus, but he said that we were using avast 2021.</p>\n' +
+      '<p>Diversify kpis make it a priority, and creativity requires you to murder your children but what\'s the real problem we\'re trying to solve here?. Peel the onion low engagement, or creativity requires you to murder your children move the needle, nor come up with something buzzworthy gain alignment.</p>',
+    authorId: 3,
+    publishedDate: '2023-08-31T14:00:00Z'
+  },
+  8: {
+    id: 8,
+    categories: [ '' ],
+    promotion: PROMOTION_LEVELS.MAIN,
     title: '',
     lede: '',
     imageUrl: '',
@@ -353,17 +435,40 @@ const POSTS = {
     authorId: 1,
     publishedDate: ''
   },
-  8: {
-    id: 8,
-    categories: [ '' ],
+  9: {
+    id: 9,
+    categories: [ CATEGORIES.HTML_CSS, CATEGORIES.IBM_Cloud ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
-    title: '',
-    lede: '',
-    imageUrl: '',
-    imageUrlCredit: '',
-    bodyHtml: '',
-    authorId: 1,
-    publishedDate: ''
+    title: 'Offline this Pushback Discussion',
+    lede: 'Feed the algorithm regroup, but circle back lean into that problem. Price point we need more paper, yet customer centric. Digital literacy put your feelers out.',
+    imageUrl: '/images/rustic_beauty.jpg',
+    imageUrlCredit: '<a href="https://www.flickr.com/photos/levettday/">Alison Day</a>',
+    bodyHtml: '<h2>We Want to Empower the Team</h2>\n' +
+      '<p>Win-win we want to empower the team with the right tools and guidance to uplevel our craft and build better, or can\n' +
+      '    you send me an invite? Form without content style without meaning c-suite, nor root-and-branch review. Deliverables\n' +
+      '    ramp up circle back no scraps hit the floor synergistic actionables, or cross pollination across our domains, nor\n' +
+      '    pixel pushing.</p>\n' +
+      '<h2>Can You Slack It to Me?</h2>\n' +
+      '<p> Golden goose, can we align on lunch orders groom the backlog, nor mumbo jumbo, blue sky. Old boys club. Punter loop\n' +
+      '    back, or are there any leftovers in the kitchen?. Currying favour on-brand but completely fresh, nor we\'re ahead of\n' +
+      '    the curve on that one, so win-win-win draft policy ppml proposal hit the ground running, so dog and pony show.</p>\n' +
+      '<h2>Prioritize these Line Items</h2>\n' +
+      '<p> Feature creep let\'s put a pin in that we\n' +
+      '    should leverage existing asserts that ladder up to the message no need to talk to users, just base it on the space\n' +
+      '    calculator, yet this is meaningless we\'ve got to manage that low hanging fruit.</p>\n' +
+      '<ul>\n' +
+      '    <li>Drink from the firehose</li>\n' +
+      '    <li>What\'s our go to market strategy?</li>\n' +
+      '    <li>Yet in this space, nor flesh that out</li>\n' +
+      '</ul>\n' +
+      '<h2>What Do You Feel You Would Bring to the Table?</h2>\n' +
+      '<p>But, draft policy ppml proposal. Enough to wash your face canatics exploratory investigation data masking, for\n' +
+      '    throughput. Accountable talk you must be muted. Translating our vision of having a market leading platform in this\n' +
+      '    space. Ultimate measure of success. Anti-pattern flesh that out, please advise soonest, and tread it daily. Deploy\n' +
+      '    no need to talk to users, just base it on the space calculator. Digital literacy cloud strategy, yet hammer out.\n' +
+      '</p>',
+    authorId: 3,
+    publishedDate: '2023-09-13T16:30:00Z'
   },
   99: {
     id: 99,

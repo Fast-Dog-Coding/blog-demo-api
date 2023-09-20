@@ -6,6 +6,9 @@ const postsController = require('../controllers/posts');
 router.get('/', getAllPosts);
 
 /* GET post categories. */
+router.get('/archive-links', getArchiveLinks);
+
+/* GET post categories. */
 router.get('/categories', getPostCategories);
 
 /* GET a post. */
@@ -49,6 +52,23 @@ async function getPostById(req, res) {
     }
 
     return res.status(200).send(post);
+}
+
+/**
+ * Retrieves the archive links from the server.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @return {Promise<{label:string,url:string}[]>} - A promise that resolves to the archive links or an error response.
+ */
+async function getArchiveLinks(req, res) {
+    const archiveLinks = await postsController.getArchiveLinks();
+
+    if (!archiveLinks) {
+        return res.status(404).end();
+    }
+
+    return res.status(200).send(archiveLinks);
 }
 
 async function getPostCategories(req, res) {

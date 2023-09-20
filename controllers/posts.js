@@ -57,6 +57,36 @@ async function getAllPosts(query) {
 }
 
 /**
+ * Retrieves the archive links for the published posts.
+ *
+ * @return {Promise<{label:string,url:string}[]>} A promise that resolves to an array of archive link objects.
+ */
+async function getArchiveLinks() {
+  const postsWithDates = Object.values(POSTS).filter(post => !!post.publishedDate);
+  const archiveLinks = postsWithDates
+    // Sort the posts, most recent on top
+    .sort((a, b) => a.publishedDate.localeCompare(b.publishedDate))
+
+    // Transform into the object shape to be returned
+    .map(post => {
+      const date = new Date(post.publishedDate);
+
+      return {
+        url: `/posts/filtered/?date=${date.getFullYear()}-${date.getMonth() + 1}`,
+        label: date.toLocaleDateString('UTC', { month: 'long', year: 'numeric' })
+      };
+    });
+
+  // Return the de-duplicated array.
+  return Object.values(
+    archiveLinks.reduce((acc, cur) => {
+      acc[cur.url] = cur;
+      return acc;
+    }, {})
+  );
+}
+
+/**
  * Retrieves the categories of a post.
  * @returns {Promise<(string)[]>} A promise that resolves with an array of category names.
  */
@@ -64,12 +94,19 @@ async function getPostCategories() {
   return Object.values(CATEGORIES);
 }
 
+/**
+ * Retrieves a post by its ID from the POSTS array.
+ *
+ * @param {number} postId - The ID of the post to retrieve.
+ * @return {Promise<*>} - A promise that resolves with the post object corresponding to the given ID.
+ */
 async function getPostById(postId) {
   return POSTS[postId];
 }
 
 module.exports = {
   getAllPosts,
+  getArchiveLinks,
   getPostById,
   getPostCategories
 };
