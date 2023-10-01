@@ -225,7 +225,7 @@ const POSTS = {
     lede: 'HCL Notes and Domino, previously known as IBM Notes and IBM Domino, were once powerful players in collaborative software. This blog post explores their history, highlights their strengths, including security and programmability, and offers insights into why their popularity eventually waned.',
     imageUrl: '/images/rustic_window.jpg',
     imageUrlCredit: '<a href="https://www.flickr.com/photos/dejankrsmanovic/">Dejan Krsmanovic</a>',
-    bodyHtml: '<p><strong>Introduction:</strong> Notes and Domino (once Lotus, then IBM, and now\n' +
+    bodyHtml: '<p><strong>Introduction:</strong> Notes and Domino (once branded under Lotus, then IBM, and now\n' +
       '    <a href="https://www.hcl-software.com/domino">HCL</a>,) while still being used globally, once stood as titans in\n' +
       '    the world of collaborative software solutions. They boasted an impressive array of features, from robust security to\n' +
       '    advanced replication capabilities and programmability. However, despite their strengths, these once-popular products\n' +

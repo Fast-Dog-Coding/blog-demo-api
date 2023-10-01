@@ -11,6 +11,9 @@ router.get('/archive-links', getArchiveLinks);
 /* GET post categories. */
 router.get('/categories', getPostCategories);
 
+/* GET reset published dates. */
+router.post('/reset-dates', postResetDates);
+
 /* GET a post. */
 router.get('/:postId', getPostById);
 
@@ -28,7 +31,7 @@ async function getAllPosts(req, res) {
     const { query } = req;
     const posts = await postsController.getAllPosts(query);
 
-    if (!posts) {
+    if (!Array.isArray(posts) || posts.length === 0) {
         return res.status(404).end();
     }
 
@@ -59,7 +62,7 @@ async function getPostById(req, res) {
  *
  * @param {Object} req - The request object.
  * @param {Object} res - The response object.
- * @return {Promise<{label:string,url:string}[]>} - A promise that resolves to the archive links or an error response.
+ * @return {Promise<{label:string,date:string}[]>} - A promise that resolves to the archive links or an error response.
  */
 async function getArchiveLinks(req, res) {
     const archiveLinks = await postsController.getArchiveLinks();
@@ -79,6 +82,13 @@ async function getPostCategories(req, res) {
     }
 
     return res.status(200).send(categories);
+}
+
+function postResetDates(req, res) {
+    res
+      .status(500)
+      .type('text/plain')
+      .send('Endpoint Under Construction');
 }
 
 module.exports = router;

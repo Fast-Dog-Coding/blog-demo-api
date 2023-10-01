@@ -9,18 +9,28 @@ const { CATEGORIES, POSTS } = require('../data');
  */
 function _buildFilterFromQuery(query = {}) {
   const keys = Object.keys(query);
-  // default filter: Match all
-  let filter = (_) => true;
+  // default filter: Match none
+  let filter = (_) => false;
+
+  // If no query was supplied, return all
+  if (keys.length === 0) {
+    keys.push('all');
+  }
 
   // Create a filter from key passed in
-  //  (currently handles a single query key/value)
   if (keys.length === 1) {
-    const key = keys[0];
+    const key = keys[0].toLocaleLowerCase();
     const value = query[key];
 
     switch (key) {
+      case 'all' :
+        filter = _ => true;
+        break;
+
       case 'category' :
-        filter = item => item.categories.includes(value);
+        filter = item => item.categories
+          .map(category => category.toLocaleLowerCase())
+          .includes(value.toLocaleLowerCase());
         break;
 
       case 'promotion' :
@@ -59,7 +69,7 @@ async function getAllPosts(query) {
 /**
  * Retrieves the archive links for the published posts.
  *
- * @return {Promise<{label:string,url:string}[]>} A promise that resolves to an array of archive link objects.
+ * @return {Promise<{label:string,date:string}[]>} A promise that resolves to an array of archive link objects.
  */
 async function getArchiveLinks() {
   const postsWithDates = Object.values(POSTS).filter(post => !!post.publishedDate);
@@ -72,7 +82,7 @@ async function getArchiveLinks() {
       const date = new Date(post.publishedDate);
 
       return {
-        url: `/posts/filtered/?date=${date.getFullYear()}-${date.getMonth() + 1}`,
+        date: `${date.getFullYear()}-${date.getMonth() + 1}`,
         label: date.toLocaleDateString('UTC', { month: 'long', year: 'numeric' })
       };
     });
@@ -80,7 +90,7 @@ async function getArchiveLinks() {
   // Return the de-duplicated array.
   return Object.values(
     archiveLinks.reduce((acc, cur) => {
-      acc[cur.url] = cur;
+      acc[cur.date] = cur;
       return acc;
     }, {})
   );

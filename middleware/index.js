@@ -1,6 +1,7 @@
 function cors (req, res, next) {
   const ACCEPTED_HOSTS = [
-    /localhost/
+    /localhost/,
+    /fastdogcoding\.(com|ca|info|net|org|us)/
   ];
 
   // If the headers not present than don't attempt to provide cors headers.
@@ -15,7 +16,6 @@ function cors (req, res, next) {
     }
   }
 
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, contentType, observe');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, contentType, observe');
   res.header('Access-Control-Allow-Methods', [ 'POST', 'DELETE', 'PUT', 'GET', 'PATCH', 'OPTIONS' ]);
   res.header('Access-Control-Allow-Credentials', true);
