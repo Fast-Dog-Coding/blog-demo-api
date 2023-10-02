@@ -1,13 +1,14 @@
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 
 COPY . /app
 WORKDIR /app
 
-RUN npm install
+RUN npm ci
 
-FROM node:16-alpine
+FROM node:18-alpine
 
 COPY --from=builder /app /app
+WORKDIR /app
 
 EXPOSE 8080
 ENTRYPOINT [ "node", "./server.js" ]
