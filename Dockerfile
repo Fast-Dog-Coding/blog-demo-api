@@ -8,7 +8,6 @@ RUN npm ci
 FROM node:18-alpine
 
 COPY --from=builder /app /app
-WORKDIR /app
 
-EXPOSE 8080
-ENTRYPOINT [ "node", "./server.js" ]
+EXPOSE 3200
+ENTRYPOINT [ "node", "/app/server.js" ]
