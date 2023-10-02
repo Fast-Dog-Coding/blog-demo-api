@@ -3,7 +3,7 @@ FROM node:18-alpine AS builder
 COPY . /app
 WORKDIR /app
 
-RUN npm ci
+RUN npm install
 
 FROM node:18-alpine
 
