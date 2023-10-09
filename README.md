@@ -10,7 +10,7 @@ This application was developed by [Grant Lindsay](https://linkedin.com/in/grant-
 
 ## Is there a live version that I can see?
 
-Coming soon.
+The live version is a work in progress, but feel free to take a look at [https://fastdogcoding.com/demo/](https://fastdogcoding.com/demo/).
 
 ## Can I copy this application for myself?
 
@@ -23,6 +23,8 @@ It should go without saying that passing this source code off as one's own work 
 ## Working with the Source Code
 
 This application programming interface (API) application is a Node.js + Express web server.
+
+You will also need to run the companion application, the [blog-demo-ui](https://github.com/Fast-Dog-Coding/blog-demo-ui) application in this repository.
 
 
 Copyright &copy; 2023 Fast Dog Coding, LLC
