@@ -20,7 +20,7 @@ const PROMOTION_LEVELS = Object.freeze({
 
 const POSTS = {
   1: {
-  id: 1,
+    id: 1,
     categories: [],
     promotion: PROMOTION_LEVELS.HERO,
     title: 'Why Create this Blog Application?',
@@ -70,7 +70,7 @@ const POSTS = {
       '    </ul>',
     authorId: 1,
     publishedDate: '2023-09-01T13:00:00Z'
-},
+  },
   2: {
     id: 2,
     categories: [ CATEGORIES.NodeJs ],
@@ -423,18 +423,6 @@ const POSTS = {
     authorId: 3,
     publishedDate: '2023-08-31T14:00:00Z'
   },
-  8: {
-    id: 8,
-    categories: [ '' ],
-    promotion: PROMOTION_LEVELS.MAIN,
-    title: '',
-    lede: '',
-    imageUrl: '',
-    imageUrlCredit: '',
-    bodyHtml: '',
-    authorId: 1,
-    publishedDate: ''
-  },
   9: {
     id: 9,
     categories: [ CATEGORIES.HTML_CSS, CATEGORIES.IBM_Cloud ],
@@ -469,6 +457,21 @@ const POSTS = {
       '</p>',
     authorId: 3,
     publishedDate: '2023-09-13T16:30:00Z'
+  }
+};
+
+const POSTS_SCRAP = {
+  8: {
+    id: 8,
+    categories: [ '' ],
+    promotion: PROMOTION_LEVELS.MAIN,
+    title: '',
+    lede: '',
+    imageUrl: '',
+    imageUrlCredit: '',
+    bodyHtml: '',
+    authorId: 1,
+    publishedDate: ''
   },
   99: {
     id: 99,
