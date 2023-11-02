@@ -305,9 +305,9 @@ const POSTS = {
     id: 5,
     categories: [ CATEGORIES.IBM_Cloud ],
     promotion: PROMOTION_LEVELS.MAIN,
-    title: 'Comparison of Cloud Service Providers',
-    lede: 'It seems to me that IBM Cloud doesn\'t always get the same level of attention as other providers, like ' +
-      'AWS and Azure. There may be a few reasons for this. One is market share and another is target audience.',
+    title: 'Popularity Among Cloud Service Providers',
+    lede: 'It seems to me that IBM Cloud doesn\'t get the same level of attention as other providers, like ' +
+      'AWS and Azure. There are a few reasons for this. One of these is market share and another is target audience.',
     imageUrl: '/images/rustic_fence.jpg',
     imageUrlCredit: '<a href="https://www.flickr.com/photos/iulian-d/">Iulian Dumitru</a>',
     bodyHtml: '<h2>Market Share</h2>\n' +
