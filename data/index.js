@@ -295,7 +295,6 @@ const POSTS = {
       '<p>In conclusion, the story of Notes and Domino is a reminder that even groundbreaking software can face challenges in a\n' +
       '    rapidly evolving tech world. Their utility lives on in the memories of those who relied, and still rely, on them for\n' +
       '    their collaborative needs.\n' +
-      '</p>\n' +
       '<p>\n' +
       '    <small class="text-secondary">&mdash;with contributions from <a href="https://openai.com/chatgpt" target="_blank">ChatGTP</a></small>\n' +
       '</p>',
@@ -304,37 +303,53 @@ const POSTS = {
   },
   5: {
     id: 5,
-    categories: [ CATEGORIES.Angular, CATEGORIES.JavaScript, CATEGORIES.TypeScript ],
+    categories: [ CATEGORIES.IBM_Cloud ],
     promotion: PROMOTION_LEVELS.MAIN,
-    title: 'Upstream Selling Quantity, and Back to the Drawing-Board',
-    lede: 'We need to button up our approach those options are already baked in with this model, so currying favour, and let\'s circle back to that. High turnaround rate on your plate looks great, can we try it a different way.',
+    title: 'Comparison of Cloud Service Providers',
+    lede: 'It seems to me that IBM Cloud doesn\'t always get the same level of attention as other providers, like ' +
+      'AWS and Azure. There may be a few reasons for this. One is market share and another is target audience.',
     imageUrl: '/images/rustic_fence.jpg',
     imageUrlCredit: '<a href="https://www.flickr.com/photos/iulian-d/">Iulian Dumitru</a>',
-    bodyHtml: '<h2>Best Practices Pivot Design Thinking</h2>\n' +
-      '    <p>Identify pain points weaponize the data blue sky. Offline this discussion this is our north star design, for we\n' +
-      '        need to future-proof this.</p>\n' +
-      '    <p>Pivot win-win-win we\'re starting to formalize flexible opinions around our foundations. My capacity is full, yet\n' +
-      '        gain traction. We need to get the vernacular right we need this overall to be busier and more active.</p>\n' +
-      '    <h2>We Need to Button up Our Approach</h2>\n' +
-      '    <p>At the end of the day cloud native container based, for cloud strategy, if you want to motivate these clowns, try\n' +
-      '        less carrot and more stick. We need to button up our approach those options are already baked in with this\n' +
-      '        model, so currying favour, and let\'s circle back to that.</p>\n' +
-      '    <p>High turnaround rate on your plate looks great, can we try it a different way. Forcing function golden goose, and\n' +
-      '        we\'ve got kpis for that, for drink from the firehose. Social currency we can\'t hear you it\'s a simple lift and\n' +
-      '        shift job, so prairie dogging.</p>\n' +
-      '    <h2>Best Practices High Performance Keywords.</h2>\n' +
-      '    <p>Create spaces to explore what\'s next low-hanging fruit, and game plan. Let\'s circle back tomorrow weaponize the\n' +
-      '        data we need to button up our approach, so get buy-in, for regroup. Slow-walk our commitment define the\n' +
-      '        underlying principles that drive decisions and strategy for your design language, and blue sky thinking my\n' +
-      '        supervisor didn\'t like the latest revision you gave me can you switch back to the first revision?</p>\n' +
-      '    <p>Who\'s the goto on this job with the way forward lift and shift. Quantity work flows pixel pushing, but optics we\n' +
-      '        need to harvest synergy effects, but race without a finish line. It just needs more cowbell that ipo will be a\n' +
-      '        game-changer.</p>\n' +
-      '    <h2>Wrapping Up</h2>\n' +
-      '    <p>Cannibalize strategic high-level 30,000 ft view, yet we need to get all stakeholders up to speed and in the right\n' +
-      '        place. I have zero cycles for this.</p>',
-    authorId: 3,
-    publishedDate: '2023-09-15T16:30:00Z'
+    bodyHtml: '<h2>Market Share</h2>\n' +
+      '<p>AWS and Azure have been around longer and have larger market shares. For example, consider the share among the top five services of $65B in the Cloud Services market in Q2 2023:</p>\n' +
+      '<table class="table">\n' +
+      '    <thead>\n' +
+      '        <tr class="table-secondary"><th>Platform</th><th>Market Share</th></tr>\n' +
+      '    </thead>\n' +
+      '    <tbody>\n' +
+      '        <tr><td>AWS</td><td>32%</td></tr>\n' +
+      '        <tr><td>Azure</td><td>22%</td></tr>\n' +
+      '        <tr><td>Google Cloud</td><td>11%</td></tr>\n' +
+      '        <tr><td>Alibaba Cloud</td><td>4%</td></tr>\n' +
+      '        <tr><td>IBM Cloud</td><td>3%</td></tr>\n' +
+      '    </tbody>\n' +
+      '</table>\n' +
+      '<p class="text-muted small">Source: <a\n' +
+      '        href="https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/">Statista</a></p>\n' +
+      '<p>Larger market share creates momentum. Leaders tend to get more visibility, which attracts new customers and, as a\n' +
+      '    result, they continue to lead.</p>\n' +
+      '<h2>Target Audience</h2>\n' +
+      '<p>IBM Cloud focuses more on enterprise clients. IBM emphasize security, compliance, and hybrid cloud solutions, making\n' +
+      '    them a go-to choice for industries like finance, healthcare, and government where stringent data regulations and\n' +
+      '    on-premises integration are critical. IBM Cloud positions itself as a provider with deep expertise in these\n' +
+      '    areas.</p>\n' +
+      '\n' +
+      '<p>The market leaders tend to have a broader target audience and are often associated with startups, small businesses,\n' +
+      '    and a wide range of applications. They offer a wide array of services and are known for their scalability and\n' +
+      '    flexibility, which can appeal to a wider set of customers.</p>\n' +
+      '<h2>Conclusions</h2>\n' +
+      '<p>The differences in levels of attention and even market share seems to be more about the target audience and\n' +
+      '    positioning rather than the technology itself. Each has its strengths. Different platforms cater to different needs\n' +
+      '    and customer bases.</p>\n' +
+      '<p>IBM Cloud offers a strong platform with a focus on hybrid and multi-cloud solutions, so it\'s a good choice for\n' +
+      '    enterprises with specific requirements around data protection, governance, and hybrid cloud integration.</p>\n' +
+      '<p>Whereas, other options, like AWS and Azure, offer a more general-purpose cloud platform, which can have broader\n' +
+      '    appeal.</p>' +
+      '<p>\n' +
+      '    <small class="text-secondary">&mdash;with contributions from <a href="https://openai.com/chatgpt" target="_blank">ChatGTP</a></small>\n' +
+      '</p>',
+    authorId: 1,
+    publishedDate: '2023-11-02T19:00:00Z'
   },
   6: {
     id: 6,
