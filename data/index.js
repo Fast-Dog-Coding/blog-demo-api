@@ -54,7 +54,7 @@ const POSTS = {
       '    <p>This is how the "Blog Demo" application came to be.</p>\n' +
       '    <p>Another reason for choosing a blog as a demonstration application is that the blog posts themselves offer an\n' +
       '        avenue to elaborate on\n' +
-      '        <a href="https://fastdogcoding.com/demo/files/Resume_Grant_Lindsay_Senior_Application_Developer.pdf" title="link to my resume" target="_blank">my resume</a>.\n' +
+      '        <a href="https://fastdogcoding.com/demo/files/resume.pdf" title="link to my resume" target="_blank">my resume</a>.\n' +
       '        I can discuss my skills, the rationale behind my design choices in the\n' +
       '        application, and other insights on technical topics.</p>\n' +
       '    <h2>Conclusion</h2>\n' +
@@ -65,7 +65,7 @@ const POSTS = {
       '    <p>In the meantime, you might find the following links helpful:</p>\n' +
       '    <ul>\n' +
       '        <li><a href="https://www.linkedin.com/in/grant-lindsay-us/" title="link to my LinkedIn profile" target="_blank">LinkedIn Profile</a></li>\n' +
-      '        <li><a href="https://fastdogcoding.com/demo/files/Resume_Grant_Lindsay_Senior_Application_Developer.pdf" title="link to my resume" target="_blank">Resume</a></li>\n' +
+      '        <li><a href="https://fastdogcoding.com/demo/files/resume.pdf" title="link to my resume" target="_blank">Resume</a></li>\n' +
       '        <li><a href="https://github.com/orgs/Fast-Dog-Coding/repositories" title="link to my github repositoriies" target="_blank">GitHub Repositories</a></li>\n' +
       '    </ul>',
     authorId: 1,
