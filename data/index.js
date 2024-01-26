@@ -17,7 +17,45 @@ const PROMOTION_LEVELS = Object.freeze({
   SIDE_BAR: 'side bar',
   NONE: 'none'
 });
-
+/*
+ * Image Credits:
+ *
+ * /images/office-hallway.jpeg
+ *   <a href="https://unsplash.com/@sunday_digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nastuh Abootalebi</a> on <a href="https://unsplash.com/photos/hallway-between-glass-panel-doors-yWwob8kwOCk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-conference-room.jpg
+ *   <a href="https://unsplash.com/@wocintechchat?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/photos/group-of-people-sitting-beside-rectangular-wooden-table-with-laptops-faEfWCdOKIg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-high-five.jpg
+ *   <a href="https://unsplash.com/@krakenimages?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">krakenimages</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-sitting-beside-woman-in-black-long-sleeve-shirt-376KN_ISplE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-sunny-table.jpg
+ *   <a href="https://unsplash.com/@dylandgillis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dylan Gillis</a> on <a href="https://unsplash.com/photos/people-sitting-on-chair-in-front-of-table-while-holding-pens-during-daytime-KdeqA3aTnBY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-working-together.jpg
+ *   <a href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> on <a href="https://unsplash.com/photos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-laptop-typing.jpg
+ *   <a href="https://unsplash.com/@glenncarstenspeters?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Glenn Carstens-Peters</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-npxXWgQ33ZQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-remote-home.jpg
+ *   <a href="https://unsplash.com/@domenicoloia?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Domenico Loia</a> on <a href="https://unsplash.com/photos/macbook-pro-on-table-beside-white-imac-and-magic-mouse-hGV2TfOh0ns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-lunch-meeting.jpg
+ *   <a href="https://unsplash.com/@raddfilms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Redd F</a> on <a href="https://unsplash.com/photos/people-sitting-on-chair-5U_28ojjgms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-presentation.jpg
+ *   <a href="https://unsplash.com/@jasongoodman_youxventures?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jason Goodman</a> on <a href="https://unsplash.com/photos/man-standing-behind-flat-screen-computer-monitor-bzqU01v-G54?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-teamwork.jpg
+ *   <a href="https://unsplash.com/@jasongoodman_youxventures?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jason Goodman</a> on <a href="https://unsplash.com/photos/two-person-smiling-during-daytime-Ti7LQ0r-zy4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-group-meeting.jpg
+ *   <a href="https://unsplash.com/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> on <a href="https://unsplash.com/photos/sittin-people-beside-table-inside-room-hCb3lIB8L8E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ *
+ * /images/office-workspace.jpg
+ *   <a href="https://unsplash.com/@ugmonk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jeff Sheldon</a> on <a href="https://unsplash.com/photos/turned-of-monitor-near-keyboard-and-mouse-9dI3g8owHiI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ */
 const POSTS = {
   1: {
     id: 1,
@@ -27,8 +65,8 @@ const POSTS = {
     lede: 'When evaluating potential candidates for a position, it\'s crucial to assess their skills. However, what if\n' +
       '        the applicant\'s work is mostly proprietary? Ideally, they should be able to provide you with a sample of their work\n' +
       '        that they can share.',
-    imageUrl: '/images/rustic_house.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/billgarrett-newagecrap/">William Garrett</a>',
+    imageUrl: '/images/office-hallway.jpeg',
+    imageUrlCredit: '<a href="https://unsplash.com/@sunday_digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nastuh Abootalebi</a> on <a href="https://unsplash.com/photos/hallway-between-glass-panel-doors-yWwob8kwOCk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<h2>Assessing Competence</h2>\n' +
       '    <p>When searching for the right fit for a job, whether you\'re a client or an employer, you naturally want some\n' +
       '        assurance that the job seeker can meet the demands of the role. This is a reasonable expectation.</p>\n' +
@@ -77,8 +115,8 @@ const POSTS = {
     promotion: PROMOTION_LEVELS.FEATURE,
     title: 'Node.js: A Powerful Choice for Building APIs',
     lede: 'In today\'s fast-paced IT world, Node.js has become a powerful choice for building APIs, offering speed, efficiency, a unified language stack, and a rich ecosystem. Let\'s explore why Node.js shines in API development and compare it to alternative technologies.',
-    imageUrl: '/images/rustic_kitchen.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/guldem/">Güldem Üstün</a>',
+    imageUrl: '/images/office-conference-room.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@wocintechchat?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/photos/group-of-people-sitting-beside-rectangular-wooden-table-with-laptops-faEfWCdOKIg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<p>In today\'s fast-paced IT landscape, the need for efficient and scalable API development is more critical than\n' +
       '        ever. Node.js, a runtime built on Chrome\'s V8 JavaScript engine, has emerged as a formidable tool for creating\n' +
       '        APIs that meet the demands of both technicians and managers in the industry. In this blog post, we\'ll explore\n' +
@@ -140,8 +178,8 @@ const POSTS = {
     promotion: PROMOTION_LEVELS.FEATURE,
     title: 'MongoDB: Unleashing the Power of NoSQL Databases',
     lede: 'Hey there! Today, we\'re diving into the world of databases and exploring MongoDB, a popular NoSQL database system. We\'ll also take a look at how it compares to traditional relational databases and other NoSQL options. So, grab your virtual passport, because we\'re about to embark on a data-driven journey!',
-    imageUrl: '/images/rustic_porch.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/sarahvain/">Sarah Stierch</a>',
+    imageUrl: '/images/office-high-five.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@krakenimages?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">krakenimages</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-sitting-beside-woman-in-black-long-sleeve-shirt-376KN_ISplE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<h2>MongoDB: A Brief Introduction</h2>\n' +
       '\n' +
       '    <p>MongoDB is a document-oriented NoSQL database that\'s been making waves in the tech world. As an application\n' +
@@ -223,8 +261,8 @@ const POSTS = {
     promotion: PROMOTION_LEVELS.MAIN,
     title: 'The Rise and Decline of Notes and Domino: A Brief History and Analysis',
     lede: 'HCL Notes and Domino, previously known as IBM Notes and IBM Domino, were once powerful players in collaborative software. This blog post explores their history, highlights their strengths, including security and programmability, and offers insights into why their popularity eventually waned.',
-    imageUrl: '/images/rustic_window.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/dejankrsmanovic/">Dejan Krsmanovic</a>',
+    imageUrl: '/images/office-sunny-table.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@dylandgillis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dylan Gillis</a> on <a href="https://unsplash.com/photos/people-sitting-on-chair-in-front-of-table-while-holding-pens-during-daytime-KdeqA3aTnBY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<p><strong>Introduction:</strong> Notes and Domino (once branded under Lotus, then IBM, and now\n' +
       '    <a href="https://www.hcl-software.com/domino">HCL</a>,) while still being used globally, once stood as titans in\n' +
       '    the world of collaborative software solutions. They boasted an impressive array of features, from robust security to\n' +
@@ -308,8 +346,8 @@ const POSTS = {
     title: 'Popularity Among Cloud Service Providers',
     lede: 'It seems to me that IBM Cloud doesn\'t get the same level of attention as other providers, like ' +
       'AWS and Azure. There are a few reasons for this. One of these is market share and another is target audience.',
-    imageUrl: '/images/rustic_fence.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/iulian-d/">Iulian Dumitru</a>',
+    imageUrl: '/images/office-working-together.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> on <a href="https://unsplash.com/photos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<h2>Market Share</h2>\n' +
       '<p>AWS and Azure have been around longer and have larger market shares. For example, consider the share among the top five services of $65B in the Cloud Services market in Q2 2023:</p>\n' +
       '<table class="table">\n' +
@@ -357,8 +395,8 @@ const POSTS = {
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'That\'s Not on the Roadmap Workflow Ecosystem',
     lede: 'Pass the mayo, appeal to the client, sue the vice president encourage & support business growth, yet I have a hard stop in an hour and half. In this space, can you put it on my calendar?',
-    imageUrl: '/images/rustic_goat.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/freestocks/">freestocks.org</a>',
+    imageUrl: '/images/office-laptop-typing.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@glenncarstenspeters?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Glenn Carstens-Peters</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-npxXWgQ33ZQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<h2>Overcome Key Issues to Meet Key Milestones</h2>\n' +
       '    <p>I am dead inside. Can you put it on my calendar? Wheelhouse peel the onion, nor finance, let\'s circle back to\n' +
       '        that. That\'s not on the roadmap workflow ecosystem powerpoint Bunny, nor cross sabers. Minimize backwards\n' +
@@ -414,8 +452,8 @@ const POSTS = {
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'Collaboration Through Advanced Technology - Great Plan!',
     lede: 'Let me diarize this, and we can synchronise ourselves at a later time point land the plane we need to think big start small and scale fast to energize our clients.',
-    imageUrl: '/images/rustic_relic.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/119886413@N05/">Michel Curi</a>',
+    imageUrl: '/images/office-remote-home.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@domenicoloia?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Domenico Loia</a> on <a href="https://unsplash.com/photos/macbook-pro-on-table-beside-white-imac-and-magic-mouse-hGV2TfOh0ns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<h2>Minimize Backwards Overflow, in this Space</h2>\n' +
       '<p>It\'s not hard guys my grasp on reality right now is tenuous, so who\'s the goto on this job with the way forward\n' +
       '    bleeding edge. Closer to the metal nail it down, or granularity, so collaboration through advanced technology. We\n' +
@@ -444,8 +482,8 @@ const POSTS = {
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'Offline this Pushback Discussion',
     lede: 'Feed the algorithm regroup, but circle back lean into that problem. Price point we need more paper, yet customer centric. Digital literacy put your feelers out.',
-    imageUrl: '/images/rustic_beauty.jpg',
-    imageUrlCredit: '<a href="https://www.flickr.com/photos/levettday/">Alison Day</a>',
+    imageUrl: '/images/office-lunch-meeting.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@raddfilms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Redd F</a> on <a href="https://unsplash.com/photos/people-sitting-on-chair-5U_28ojjgms?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     bodyHtml: '<h2>We Want to Empower the Team</h2>\n' +
       '<p>Win-win we want to empower the team with the right tools and guidance to uplevel our craft and build better, or can\n' +
       '    you send me an invite? Form without content style without meaning c-suite, nor root-and-branch review. Deliverables\n' +
