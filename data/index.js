@@ -1,14 +1,9 @@
 const CATEGORIES = Object.freeze({
-  NodeJs: 'Node.js',
-  Angular: 'Angular',
-  JavaScript: 'JavaScript',
-  TypeScript: 'TypeScript',
-  IBM_Cloud: 'IBM Cloud',
-  IBM_Cloudant: 'IBM Cloudant',
-  IBM_Domino: 'IBM Domino',
-  HTML_CSS: 'HTML/CSS',
-  MongoDB: 'MongoDB',
-  Development: 'Development'
+  Languages: 'Languages',
+  Databases: 'Databases',
+  Frameworks: 'Frameworks',
+  Cloud: 'Cloud',
+  Career: 'Career'
 });
 
 const PROMOTION_LEVELS = Object.freeze({
@@ -58,11 +53,56 @@ const PROMOTION_LEVELS = Object.freeze({
  *   <a href="https://unsplash.com/@ugmonk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jeff Sheldon</a> on <a href="https://unsplash.com/photos/turned-of-monitor-near-keyboard-and-mouse-9dI3g8owHiI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
  */
 const POSTS = {
+  10: {
+    id: 10,
+    categories: [ CATEGORIES.Career ],
+    promotion: PROMOTION_LEVELS.FEATURE,
+    title: 'The STAR Mindset: Transforming Your Career Through Strategic Storytelling',
+    lede: 'In the competitive landscape of job interviews, being able to effectively communicate your experiences and accomplishments is key. One method that has gained popularity for structuring interview responses is the STAR method—Situation, Task, Action, Result. While many job seekers understand the concept, the challenge often lies in recalling specific examples from their past experiences. What if I told you that the best time to prepare these STAR stories is not when you\'re preparing for an interview, but as these experiences unfold?',
+    imageUrl: '/images/office-workspace.jpg',
+    imageUrlCredit: '<a href="https://unsplash.com/@ugmonk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jeff Sheldon</a> on <a href="https://unsplash.com/photos/turned-of-monitor-near-keyboard-and-mouse-9dI3g8owHiI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    bodyHtml: '<h2>The Value of the STAR Method</h2>\n' +
+      '\n' +
+      '<p>The <a href="https://www.betterup.com/blog/star-interview-method" target="_blank" title="Link to an article, 30 star interview method questions to prepare for">STAR method</a> provides a framework for answering behavioral interview questions, which are designed to elicit real-life examples of your skills and experiences. By following this structure, you can provide a clear and concise response that demonstrates your abilities and highlights your strengths. However, the effectiveness of the STAR method hinges on your ability to recall and articulate these experiences during the interview.</p>\n' +
+      '\n' +
+      '<h2>Why Documenting Experiences as They Happen Is Advantageous</h2>\n' +
+      '\n' +
+      '<p>Imagine this scenario: You\'re in the middle of a project, facing a challenge that requires you to demonstrate leadership and problem-solving skills. Instead of waiting until you\'re preparing for an interview to document this experience, take a moment to jot down the details as they happen. Not only does this help you remember the specifics of the situation, but it also allows you to capture your thoughts and feelings in the moment, providing a more authentic and detailed account of the experience.</p>\n' +
+      '\n' +
+      '<h2>Using STAR Stories for Performance Evaluations</h2>\n' +
+      '\n' +
+      '<p>In addition to helping you prepare for interviews, documenting your experiences as they happen can also benefit you in your current job. During performance evaluations, having a collection of STAR stories can help you make a compelling case for a raise or promotion. By highlighting your achievements and the impact of your work using concrete examples, you can demonstrate your value to your employer and increase your chances of advancing in your career.</p>\n' +
+      '\n' +
+      '<h2>Suggestions for Documenting STAR-Worthy Experiences</h2>\n' +
+      '\n' +
+      '<ol>\n' +
+      '<li><strong>Reflect Daily:</strong> At the end of each day, take a few minutes to reflect on any situations that may be worth documenting. Consider moments where you demonstrated key skills or faced challenges that resulted in a positive outcome.</li>\n' +
+      '\n' +
+      '<li><strong>Maintain a STAR Folder:</strong> Create a folder, either physical or electronic, where you can store these stories. Label each story with key details, such as the skills demonstrated, the outcome, and any key learnings. These stories can be used to answer multiple types of questions, as they often demonstrate a range of skills and experiences.</li>\n' +
+      '\n' +
+      '<li><strong>Focus on Challenging Experiences:</strong> Don\'t shy away from documenting experiences that may not have had a positive outcome initially. These stories can be valuable examples of your ability to learn from mistakes and overcome obstacles.</li>\n' +
+      '\n' +
+      '<li><strong>Seek Positive Outcomes in Challenging Situations:</strong> The STAR method encourages highlighting positive outcomes, even in challenging situations. By adopting a mindset of seeking positive outcomes as experiences unfold, you can proactively look for ways to turn challenges into learning opportunities.</li>\n' +
+      '</ol>\n' +
+      '\n' +
+      '<h3>Example:</h3>\n' +
+      '\n' +
+      '<p>Let\'s say you were in a situation where you had to convince your team to adopt a new process, but faced resistance. Instead of focusing on the initial challenge, you could highlight how you used data and logic to make your case, ultimately leading to improved efficiency and teamwork.</p>\n' +
+      '\n' +
+      '<h2>Take Away</h2>\n' +
+      '\n' +
+      '<p>In conclusion, the STAR method is not just a tool for preparing for interviews—it\'s a mindset that can transform how you approach challenges and opportunities in your career. By documenting your experiences as they happen, you can build a repository of compelling stories that showcase your skills and abilities, giving you a competitive edge in your job search and in your current role.</p>\n' +
+      '<p>\n' +
+      '    <small class="text-secondary">&mdash;with contributions from <a href="https://openai.com/chatgpt" target="_blank">ChatGTP</a></small>\n' +
+      '</p>',
+    authorId: 1,
+    publishedDate: '2024-04-11T15:45:00Z'
+  },
   9: {
     id: 9,
-    categories: [ CATEGORIES.Development ],
+    categories: [ CATEGORIES.Career ],
     promotion: PROMOTION_LEVELS.MAIN,
-    title: 'The Lifelong Journey of a Web Developer: Embracing Emerging Technologies',
+    title: 'The Ongoing Journey of a Web Developer: Embracing Emerging Technologies',
     lede: 'As web developers, we live in a dynamic and ever-evolving landscape\n' +
       'of technologies. Staying relevant and competitive requires a commitment to continuous learning and\n' +
       'adaptation. With over 15 years of experience in web development, I\'ve come to appreciate the\n' +
@@ -127,8 +167,8 @@ const POSTS = {
   },
   8: {
     id: 8,
-    categories: [ CATEGORIES.IBM_Cloud ],
-    promotion: PROMOTION_LEVELS.MAIN,
+    categories: [ CATEGORIES.Cloud ],
+    promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'Popularity Among Cloud Service Providers',
     lede: 'It seems to me that IBM Cloud doesn\'t get the same level of attention as other providers, like ' +
       'AWS and Azure. There are a few reasons for this. One of these is market share and another is target audience.',
@@ -177,7 +217,7 @@ const POSTS = {
   },
   7: {
     id: 7,
-    categories: [ CATEGORIES.IBM_Domino ],
+    categories: [ CATEGORIES.Frameworks ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'The Rise and Decline of Notes and Domino: A Brief History and Analysis',
     lede: 'HCL Notes and Domino, previously known as IBM Notes and IBM Domino, were once powerful players in collaborative software. This blog post explores their history, highlights their strengths, including security and programmability, and offers insights into why their popularity eventually waned.',
@@ -261,7 +301,7 @@ const POSTS = {
   },
   6: {
     id: 6,
-    categories: [ CATEGORIES.IBM_Domino, CATEGORIES.MongoDB ],
+    categories: [ CATEGORIES.Frameworks, CATEGORIES.Databases ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'That\'s Not on the Roadmap Workflow Ecosystem',
     lede: 'Pass the mayo, appeal to the client, sue the vice president encourage & support business growth, yet I have a hard stop in an hour and half. In this space, can you put it on my calendar?',
@@ -318,7 +358,7 @@ const POSTS = {
   },
   5: {
     id: 5,
-    categories: [ CATEGORIES.JavaScript, CATEGORIES.TypeScript, CATEGORIES.IBM_Cloud ],
+    categories: [ CATEGORIES.Languages, CATEGORIES.Cloud ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'Collaboration Through Advanced Technology - Great Plan!',
     lede: 'Let me diarize this, and we can synchronise ourselves at a later time point land the plane we need to think big start small and scale fast to energize our clients.',
@@ -348,7 +388,7 @@ const POSTS = {
   },
   4: {
     id: 4,
-    categories: [ CATEGORIES.HTML_CSS, CATEGORIES.IBM_Cloud ],
+    categories: [ CATEGORIES.Languages, CATEGORIES.Cloud ],
     promotion: PROMOTION_LEVELS.SIDE_BAR,
     title: 'Offline this Pushback Discussion',
     lede: 'Feed the algorithm regroup, but circle back lean into that problem. Price point we need more paper, yet customer centric. Digital literacy put your feelers out.',
@@ -384,8 +424,8 @@ const POSTS = {
   // Hero, and 2 Features below remain, for now, even though oldest.
   3: {
     id: 3,
-    categories: [ CATEGORIES.MongoDB, CATEGORIES.IBM_Cloudant ],
-    promotion: PROMOTION_LEVELS.FEATURE,
+    categories: [ CATEGORIES.Databases ],
+    promotion: PROMOTION_LEVELS.MAIN,
     title: 'MongoDB: Unleashing the Power of NoSQL Databases',
     lede: 'Hey there! Today, we\'re diving into the world of databases and exploring MongoDB, a popular NoSQL database system. We\'ll also take a look at how it compares to traditional relational databases and other NoSQL options. So, grab your virtual passport, because we\'re about to embark on a data-driven journey!',
     imageUrl: '/images/office-high-five.jpg',
@@ -467,7 +507,7 @@ const POSTS = {
   },
   2: {
     id: 2,
-    categories: [ CATEGORIES.NodeJs ],
+    categories: [ CATEGORIES.Frameworks ],
     promotion: PROMOTION_LEVELS.FEATURE,
     title: 'Node.js: A Powerful Choice for Building APIs',
     lede: 'In today\'s fast-paced IT world, Node.js has become a powerful choice for building APIs, offering speed, efficiency, a unified language stack, and a rich ecosystem. Let\'s explore why Node.js shines in API development and compare it to alternative technologies.',
@@ -580,21 +620,6 @@ const POSTS = {
     authorId: 1,
     publishedDate: '2024-01-25T12:00:00Z'
   }
-
-  /*
-  Sure! Here are the dates starting from `2024-03-28T14:30:00Z` and going back a week each time:
-
-1. ``
-2. ``
-3. ``
-4. `2024-03-07T14:30:00Z`
-5. ``
-6. ``
-7. ``
-8. ``
-9. ``
-10. ``
-   */
 };
 
 const POSTS_SCRAP = {
