@@ -4,6 +4,14 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const { cors } = require('./middleware');
 
+// TODO: Import http constants.
+// TODO: env file;
+//       validateEnvVariables();
+// TODO: Database connection
+// TODO: logging
+// TODO: Limiter
+// TODO: have morgan use logger
+
 const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/posts');
 const usersRouter = require('./routes/users');
